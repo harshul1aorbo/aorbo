@@ -98,6 +98,35 @@
         </div>
         <button class="explore-btn">Explore Insights</button>
     </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const carouselTrack = document.querySelector(".carousel-track");
+    const carouselContainer = document.querySelector(".carousel-container");
+    let scrollPosition = 0;
+    const scrollSpeed = 15; // Adjust this value to control the scrolling speed
+    const maxScroll = carouselTrack.scrollWidth - carouselContainer.clientWidth;
+
+    // Hide arrows
+    document.querySelectorAll(".carousel-arrow").forEach(arrow => arrow.style.display = "none");
+
+    carouselContainer.addEventListener("mousemove", function (event) {
+        const containerWidth = carouselContainer.offsetWidth;
+        const mouseX = event.clientX - carouselContainer.getBoundingClientRect().left;
+
+        if (mouseX > containerWidth * 0.75 && scrollPosition < maxScroll) {
+            // Move right when mouse is on the right side
+            scrollPosition += scrollSpeed;
+        } else if (mouseX < containerWidth * 0.25 && scrollPosition > 0) {
+            // Move left when mouse is on the left side
+            scrollPosition -= scrollSpeed;
+        }
+
+        // Apply smooth scrolling effect
+        carouselTrack.style.transform = `translateX(-${scrollPosition}px)`;
+    });
+});
+
+    </script>
 
     <section class="whats-new">
         <h2>What's New</h2>
