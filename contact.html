@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Aorbo Treks</title>
     <link rel="stylesheet" href="styles.css">
+
+
     <style>
         .contact-details {
             display: flex;
@@ -173,28 +175,41 @@
                         <label for="message">Comment</label>
                         <textarea id="message" placeholder="Enter your message"></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">Submit</button>
+                    <button type="submit" id="1" class="submit-btn">Submit</button>
                 </form>
             </div>
+            <script>
+                document.getElementById("1").style.display = "block";
+                document.getElementById("1").style.margin = "10px auto";
+                document.getElementById("1").style.textAlign = "center";
+            </script>
             
             <div class="contact-info-section">
                 <img src="contact service.jpg" alt="Customer Support" class="support-image">
             </div>
         </div>
+        <style>
+            .contact-link img {
+                vertical-align: middle; /* Aligns with text */
+                height: 1em; /* Adjust size relative to text */
+            }
+            
+        </style>
         <div class="contact-details">
             <!-- Group 1: Grievances and Ombudsman -->
             <div class="contact-group">
                 <div class="contact-box">
                     <h3>Grievances</h3>
                     <p>Connect with us for complaint resolution—we prioritize your concerns.</p>
-                    <a href="#" class="contact-link">Send a message</a>
+                    <a href="" class="contact-link"><img src="message.svg" id="icon1" alt="Map Icon" class="icon"> Send a message</a>
                 </div>
                 <div class="contact-box">
                     <h3>Ombudsman</h3>
                     <p>Reach out to our regulatory authority via message for complaint escalation.</p>
-                    <a href="#" class="contact-link">Know More</a>
+                    <a href="#" class="contact-link"> Know More</a>
                 </div>
             </div>
+            
         
             <hr class="separator-line">
         
@@ -210,7 +225,7 @@
                         CIN: U67190KA2012PTC176031
                     </address>
                     <a href="#" class="contact-link address-link">
-                        <img src="map-icon.png" alt="Map Icon" class="icon"> View in Maps
+                        <img src="location.svg" id="icon1" alt="Map Icon" class="icon"> View in Maps
                     </a>
                 </div>
                 <div class="contact-box">
@@ -220,7 +235,7 @@
                     <button class="chat-btn">Get Help <span class="arrow">→</span></button>
                     <p class="support-text">To reach us by phone, tap below</p>
                     <a href="#" class="contact-link phone-link">
-                        <img src="phone-icon.png" alt="Phone Icon" class="icon"> Contact Us
+                        <img src="contact.svg" alt="Phone Icon" class="icon"> Contact Us
                     </a>
                 </div>
             </div>
